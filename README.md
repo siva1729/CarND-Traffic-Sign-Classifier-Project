@@ -60,12 +60,12 @@ known to be activated by simple features like lines, edges ad blobs.
 ![alt text](.\rgb_gray.png)
 
 - Also the pixel values are  Normalized to have a mean of 0 and standard deviation of 1 (using the
-normalization factor of 128. normalized_pixel = (pixel - 128/128)) and pixel values have range [-1,1).
-This would help so that the feaures (weights/biases) do not go out of bounds during backprop.
+normalization factor of 128. normalized pixel = (pixel - 128/128)) and pixel values have range [-1,1).
+This would help so that the features (weights/biases) do not go out of bounds during backprop.
 
 - Additional data: As the data distribution seems to be non-uniform, adding additional images to
 data set for those images that are low in number would help in training of the network.
-Images could be altered verions of original image(s) with additional noise (pixel shifts +/-2),
+Images could be altered versions of original image(s) with additional noise (pixel shifts +/-2),
 little rotational transformations, brightness/contrast change, etc. But this has not been done here 
 (in interest of time) and would have achieved better results.
 
@@ -74,7 +74,7 @@ little rotational transformations, brightness/contrast change, etc. But this has
 
 My final model consisted of the following layers: 
 
-| Layer         		|     Description	        					| 
+| Layer         	    |     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Grayscale Normalized image			| 
 | Convolution1 5x5     	| 1x1 stride, VALID padding, outputs 28x28x12 	|
@@ -133,8 +133,11 @@ and test accuracies also showed simultaneous improvement. And also showed no sig
 
 Here are five German traffic signs (from web) used for testing the model:
 
-![alt text](./test_tsd/image_1_scaled.jpg) ![alt text](./test_tsd/image_27_scaled.jpg) ![alt text](./test_tsd/image_28_scaled.jpg) 
-![alt text](./test_tsd/image_29_scaled.jpg) ![alt text](./test_tsd/image_31_scaled.jpg)
+![alt text](.\test_tsd_scaled\image_1_scaled.jpg) 
+![alt text](.\test_tsd_scaled\image_27_scaled.jpg)
+![alt text](.\test_tsd_scaled\image_28_scaled.jpg) 
+![alt text](.\test_tsd_scaled\image_29_scaled.jpg) 
+![alt text](.\test_tsd_scaled\image_31_scaled.jpg)
 
 The images are of different resolution and there are some additional structures/text in some images and this
 would be a good test for the model to predict the signs.
