@@ -133,11 +133,11 @@ and test accuracies also showed simultaneous improvement. And also showed no sig
 
 Here are five German traffic signs (from web) used for testing the model:
 
-![alt text](.\test_tsd_scaled\image_1_scaled.jpg) 
-![alt text](.\test_tsd_scaled\image_27_scaled.jpg)
-![alt text](.\test_tsd_scaled\image_28_scaled.jpg) 
-![alt text](.\test_tsd_scaled\image_29_scaled.jpg) 
-![alt text](.\test_tsd_scaled\image_31_scaled.jpg)
+![alt text](./test_tsd_scaled/image_1_scaled.jpg) 
+![alt text](./test_tsd_scaled/image_27_scaled.jpg)
+![alt text](./test_tsd_scaled/image_28_scaled.jpg) 
+![alt text](./test_tsd_scaled/image_29_scaled.jpg) 
+![alt text](./test_tsd_scaled/image_31_scaled.jpg)
 
 The images are of different resolution and there are some additional structures/text in some images and this
 would be a good test for the model to predict the signs.
