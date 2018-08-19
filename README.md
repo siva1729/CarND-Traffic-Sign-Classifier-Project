@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-**Build a Traffic Sign Recognition Project**
+## **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -22,13 +22,11 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
+### Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
-
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 Dataset used: **German Traffic Sign Dataset** [GTSRD]
 Used the pandas library to calculate summary statistics of the traffic signs data set:
 
@@ -38,7 +36,7 @@ Used the pandas library to calculate summary statistics of the traffic signs dat
 * The shape of a traffic sign image: 32x32x3 (RGB image)
 * The number of unique classes/labels in the data set: 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a histogram plot showing the 
 the number of images/class in each of the image sets (Training, Validation and Test sets).
@@ -48,9 +46,9 @@ Normalized image data would help to train the Network.
 
 ![alt text](./data_vis1.png)
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-###1. Preprocessing of the Input Image data
+### 1. Preprocessing of the Input Image data
 - The Input image data from Dataset is in color RGB format and are converted to Gray scale images
 using the luminosity method (taking sum-product of the RGB values of the pixel with [0.299, 0.587, 0.114])
 This is achieved using numpy.dot method. The Grayscale images seems to enable the training due to increased
@@ -70,7 +68,7 @@ little rotational transformations, brightness/contrast change, etc. But this has
 (in interest of time) and would have achieved better results.
 
 
-###2. Description of the Network Model.
+### 2. Description of the Network Model.
 
 My final model consisted of the following layers: 
 
@@ -91,13 +89,13 @@ My final model consisted of the following layers:
 |						|												|
  
 
-####3. Training the Model. 
+#### 3. Training the Model. 
 
 This is base model from the popular Lenet architecture and the implementation is in Tensorflow
 The model is trained using the AdamOptimizer with a batch size of 128 and number of epochs = 50. 
 And the learning parameter has been set at 0.001. 
 
-####4. Approach to get required Validation accuracy
+#### 4. Approach to get required Validation accuracy
 
 The LeNet architecture is one of the preliminary architecture to perform well for image classification problem.
 The model is based on the popular Lenet architecture and initially trained the model as-is using the RGB input images
@@ -127,9 +125,9 @@ and test accuracies also showed simultaneous improvement. And also showed no sig
 (high bias) as training, validation and test accuracy are high enough. 
  
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Test images from Web
+#### 1. Test images from Web
 
 Here are five German traffic signs (from web) used for testing the model:
 
@@ -149,7 +147,7 @@ Third image was of Pedestrain crossing, that again had same issue as second imag
 of the image) with additional text.
 Fourth and fifth images were cropped just to have traffic signs with good image contrast and were predicted correctly.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
@@ -165,7 +163,7 @@ Here are the results of the prediction:
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
 This compares favorably to the accuracy on the test set of traffic signs
 
-####3. Predictions for test images (softmax probabilities for each prediction). 
+#### 3. Predictions for test images (softmax probabilities for each prediction). 
 The code for making predictions on my final model is located in the 13th cell of the Ipython notebook.
 
 Here are the probabilities for the five images, the probabilities were very high compared to other
