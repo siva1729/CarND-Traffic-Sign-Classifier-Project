@@ -46,7 +46,7 @@ As we can see the data set distribution is not uniform among the different class
 could cause detection of certain type of images difficult. Ideally uniform dataset with
 Normalized image data would help to train the Network.
 
-![alt text](.\data_vis1.png)
+![alt text](./data_vis1.png)
 
 ###Design and Test a Model Architecture
 
@@ -57,7 +57,7 @@ This is achieved using numpy.dot method. The Grayscale images seems to enable th
 brightness/contrast and reduced noise of the image and also as the input/initial layer of the ConvNet
 known to be activated by simple features like lines, edges ad blobs.
 
-![alt text](.\rgb_gray.png)
+![alt text](./rgb_gray.png)
 
 - Also the pixel values are  Normalized to have a mean of 0 and standard deviation of 1 (using the
 normalization factor of 128. normalized pixel = (pixel - 128/128)) and pixel values have range [-1,1).
